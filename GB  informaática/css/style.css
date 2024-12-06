@@ -1,0 +1,183 @@
+/* Resetando estilos globais para garantir consistência entre os navegadores */
+* {
+    margin: 0; /* Remover a sua margem padrão */
+    padding: 0; /* Removerá o seu preenchimento padrão */
+    border: 0; /* Remove a sua borda que vem padrão */
+    outline: 0; /* Removerá o seu contorno de foco */
+    box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura e altura */
+    list-style: none; /* Remove estilos de lista (como marcadores) */
+    text-decoration: none; /* Remove sublinhados de links */
+    position: relative; /* Permite o uso de posicionamento absoluto relativo ao contêiner */
+}
+
+/* Estilizando o corpo da página */
+body {
+    font-family: 'Signika', sans-serif; /* Define a fonte principal */
+    background-color: #354978; /* Define uma cor de fundo azul */
+    position: relative; /* Estabelece um contexto de posicionamento para elementos filhos */
+}
+
+/* Estilo para a barra de navegação fixa no topo */
+.navbar {
+    display: flex; /* Usando o modelo flex para organizar os itens */
+    justify-content: space-between; /* Distribui os itens com espaço entre eles */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    background-color: #262724; /* Cor de fundo escura */
+    padding: 10px 25px; /* Espaçamento interno */
+    color: #fff; /* Cor do texto branca */
+    position: fixed; /* Fixa a navbar no topo da página */
+    width: 100%; /* Ocupa toda a largura da tela */
+    top: 0; /* Posiciona a navbar no topo */
+    z-index: 1000; /* Garante que a navbar fique sobre outros elementos */
+}
+
+/* Estilizando o container do logo */
+.logo-container {
+    display: flex; /* Organiza o logo e o nome da empresa lado a lado */
+    align-items: center; /* Alinha verticalmente os itens ao centro */
+}
+
+/* Estilo para o logo da empresa */
+.logo {
+    height: 40px; /* Define uma altura fixa para o logo */
+    margin-right: 10px; /* Espaçamento à direita do logo */
+}
+
+/* Estilo para o nome da empresa */
+.company-name {
+    font-size: 1.2rem; /* Tamanho de fonte adequado para o nome da empresa */
+    font-weight: bold; /* Define o nome da empresa em negrito */
+}
+
+/* Estilo para os links de navegação */
+.nav-links a {
+    text-decoration: none; /* Remove sublinhado de links */
+    color: #fff; /* Cor do texto dos links em branco */
+    margin: 0 10px; /* Espaçamento horizontal entre os links */
+    font-size: 1rem; /* Tamanho de fonte para os links */
+    transition: color 0.3s; /* Transição suave na mudança de cor */
+}
+
+/* Efeito de hover nos links da navegação */
+.nav-links a:hover {
+    color: #A74638; /* Muda a cor do link quando o mouse passa sobre ele */
+}
+
+/* Estilo para as seções */
+.sessao {
+    padding: 100px 20px; /* Espaçamento interno maior para compensar a navbar fixa */
+    margin-top: 60px; /* Compensa a altura da navbar fixa */
+}
+
+/* Estilo geral para cabeçalhos */
+h1, h3 {
+    color: #fff; /* Cor do texto dos cabeçalhos em branco */
+    font-family: Arial, Helvetica, sans-serif; /* Fonte padrão para títulos */
+}
+
+/* Estilizando seções específicas */
+#inicio, #sobre, #serviços, #contato {
+    text-align: center; /* Centraliza o conteúdo nas seções */
+}
+
+/* Cor dos textos dentro de seções específicas */
+#inicio h1, #inicio p,
+#sobre h1, #sobre p,
+#serviços h1, #serviços p,
+#notebooks h1, #notebooks p,
+#impressora h1, #impressora p,
+#computador h1, #computador p,
+#monitor h1, #monitor p,
+#celulares_e_tablets h1, #celulares_e_tablets p {
+    color: #fff; /* Define a cor do texto como branco em todas essas seções */
+}
+
+#contato img {
+    width: 1400px;  /* Define a largura da imagem */
+    height: 200px; /* Define a altura da imagem */
+}
+
+
+
+/* Estilo para o rodapé */
+footer {
+    background-color: #262724; /* Cor de fundo escura */
+    padding: 10px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+    color: #fff; /* cor do texto em branco */
+}
+
+/* Estilo para links no rodapé */
+footer a {
+    color: #A74638; /* cor dos links do rodapé */
+}
+
+/* Estilo para o layout de imagens */
+.image-stack {
+    display: flex; /* Organiza as imagens de forma flexível */
+    flex-wrap: wrap; /* Permite que as imagens se ajustem em várias linhas */
+    justify-content: space-around; /* Distribui as imagens de maneira espaçada */
+    gap: 20px; /* Espaço entre as imagens */
+}
+
+/* Estilo para o contêiner de cada imagem */
+.image-container {
+    position: relative; /* Permite o posicionamento de elementos dentro */
+    width: 180px; /* Define a largura do contêiner */
+    height: 180px; /* Define a altura do contêiner */
+    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse o tamanho do contêiner */
+}
+
+/* Estilo para as imagens dentro do contêiner */
+.image-container img {
+    width: 100%; /* As imagens ocupam 100% da largura do contêiner */
+    height: 100%; /* As imagens ocupam 100% da altura do contêiner */
+    object-fit: cover; /* Assegura que a imagem cubra todo o espaço sem distorção */
+    transition: transform 0.3s; /* Suaviza a transformação da imagem */
+}
+
+/* Efeito de hover nas imagens */
+.image-container:hover img {
+    transform: scale(1.1); /* Aumenta ligeiramente o tamanho da imagem ao passar o mouse */
+}
+
+/* Estilo para o texto sobreposto nas imagens */
+.overlay-text {
+    position: absolute; /* Posiciona o texto sobre a imagem */
+    top: 50%; /* Posiciona o texto no centro vertical da imagem */
+    left: 50%; /* Posiciona o texto no centro horizontal da imagem */
+    transform: translate(-50%, -50%); /* Ajusta o texto para que esteja exatamente no centro */
+    color: #fff; /* Cor do texto branca */
+    font-size: 1.5rem; /* Tamanho do texto */
+    font-weight: bold; /* Deixa o texto em negrito */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra para melhorar a visibilidade do texto */
+}
+
+/* Estilo para os cabeçalhos principais */
+h1, h3 {
+    font-family: 'Roboto', sans-serif; /* Fonte em negrito e moderna para títulos */
+    font-weight: 700; /* Define o peso da fonte como negrito */
+    color: #A74638; /* Cor de destaque suave para títulos */
+    margin-bottom: 20px; /* Espaçamento inferior para separar dos outros elementos */
+}
+
+/* Estilo para os cabeçalhos de nível 1 */
+h1 {
+    font-size: 2.5rem; /* Tamanho maior para os títulos principais */
+}
+
+/* Estilo para os cabeçalhos de nível 3 */
+h3 {
+    font-size: 1.75rem; /* Tamanho adequado para subtítulos */
+}
+
+/* Estilo para os parágrafos */
+p {
+    font-family: 'Open Sans', sans-serif; /* Fonte clara e legível para texto */
+    font-size: 1rem; /* Tamanho de fonte adequado */
+    line-height: 1.8; /* Espaçamento entre linhas para melhorar a legibilidade */
+    color: #d3d3d3; /* Cor suave para o texto */
+    max-width: 800px; /* Limita a largura do parágrafo para maior legibilidade */
+    margin: 0 auto 20px auto; /* Centraliza os parágrafos e adiciona espaçamento inferior */
+}
+
